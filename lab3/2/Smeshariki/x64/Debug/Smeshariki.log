@@ -1,0 +1,2 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets(502,5): error : Element <LanguageStandard> has an invalid value of "stdcpp20".
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets(502,5): error MSB6011: в задачу Microsoft.Build.CPPTasks.CL переданы недопустимые параметры.
