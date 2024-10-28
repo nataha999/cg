@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Отображение окружности на canvas</title>
+    <style>
+    canvas {
+        border: 1px solid #000;
+    }
+    </style>
+</head>
+<body>
+    <canvas id="myCanvas" width="800" height="600"></canvas>
+    <script>
+        const canvas = document.getElementById('myCanvas');
+        const ctx = canvas.getContext('2d');
+
+        function drawPixelCircle(centerX, centerY, radius, strokeColor, filling, fillColor) {
+            for (let x = centerX - radius; x < centerX + radius; x++) {
+                for (let y = centerY - radius; y < centerY + radius; y++) {
+                    if ((x - centerX) * (x - centerX) + (y - centerY) * (y - centerY) < radius * radius) {
+                        ctx.fillStyle = strokeColor;
+                        ctx.fillRect(x, y, 1, 1);
+                    }
+                    if ((x - centerX) * (x - centerX) + (y - centerY) * (y - centerY) < (radius - 1) * (radius - 1)) {
+                        if (filling){
+                            ctx.fillStyle = fillColor;
+                        }
+                        else{
+                            ctx.fillStyle = "#FFF";
+                        }
+                        ctx.fillRect(x, y, 1, 1);
+                    }
+                }
+            }
+        }   
+        
+        const centerX = 400;
+        const centerY = 300;
+        const radius = 10;
+        const strokeColor = '#FF00FF';
+        const fillColor = '#0000FF';
+        const filling = true;
+
+        drawPixelCircle(centerX, centerY, radius, strokeColor, filling, fillColor);
+    </script>
+</body>
+</html>

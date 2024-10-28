@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image viewer</title>
+    <style>
+        body {
+            overflow: hidden;
+        }
+        .button {
+            cursor: pointer;
+        }
+        img {       
+            /* position: absolute; */
+            background: repeating-conic-gradient(#e2e2e2 0% 25%, transparent 0% 50%) 50%/ 30px 30px;
+        }
+    </style>
+</head>
+<body>
+    <input id="file" type="file" accept=".png, .jpeg, .jpg, .bmp" hidden>
+    <button class="button" id="upload" onClick="document.getElementById('file').click()">
+        Open
+    </button>
+    <div id="image-container"></div>
+    <script src="script.js"></script>
+</body>
+</html>

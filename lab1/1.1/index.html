@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            @keyframes jump {
+                0% { transform: translateY(0); }
+                100% { transform: translateY(-20px); }
+            }
+
+            #letter-c {
+                animation-name: jump;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                animation-timing-function: ease;
+                animation-delay: 0.5s;
+            }
+
+            #letter-n {
+                animation-name: jump;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                animation-timing-function: ease;
+                animation-delay: 0.75s;
+            }
+
+            #letter-secondN {
+                animation-name: jump;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                animation-timing-function: ease;
+                animation-delay: 1s;
+            }
+        </style>
+    </head>
+    <body>
+        <svg id="letter-c" width="170px" height="200px" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="80px" cy="100px" rx="70px" ry="90px" fill="#a865aa"/>
+            <ellipse cx="80px" cy="100px" rx="45px" ry="60px" fill="white"/>
+            <rect x="110px" y="60px" width="40px" height="80px" fill="white"/>
+        </svg>
+
+        <svg id="letter-n" width="170px" height="200px" xmlns="http://www.w3.org/2000/svg" fill="#f63659">
+            <rect x="100" y="20" width="30" height="180"/>
+            <rect x="29" y="90" width="95" height="30"/>
+            <rect x="0" y="20" width="30" height="180"/>
+        </svg>
+
+        <svg id="letter-secondN" width="170px" height="200px" xmlns="http://www.w3.org/2000/svg" fill="#0b2993">
+            <rect x="100" y="20" width="30" height="180"/>
+            <rect x="29" y="90" width="95" height="30"/>
+            <rect x="0" y="20" width="30" height="180"/>
+        </svg>   
+    </body>
+</html>
